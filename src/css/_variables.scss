@@ -1,0 +1,36 @@
+$my-primary-color:#00edce;
+$my-dark-color:#35363a;
+
+@font-face{
+    font-family: nexaSlab;
+    src: url(../fonts/Fontfabric-NexaSlab-Regular.otf);
+}
+@font-face{
+    font-family: nexaLight;
+    src: url(../fonts/NexaLight.otf);
+}
+@font-face{
+    font-family: nexaBold;
+    src: url(../fonts/NexaBold.otf);
+}
+@font-face{
+    font-family: poppinsRegular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face{
+    font-family: poppinsMedium;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+.my-primary-font{
+    font-family: nexaSlab;
+}
+.my-secondary-font{
+    font-family: nexaBold;
+}
+.my-primary-color{
+    color: $my-primary-color;
+}
+.my-dark-color{
+    color: $my-dark-color;
+}
