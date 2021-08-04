@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 $my-primary-color:#00edce;
 $my-dark-color:#35363a;
 
@@ -13,14 +15,14 @@ $my-dark-color:#35363a;
     font-family: nexaBold;
     src: url(../fonts/NexaBold.otf);
 }
-@font-face{
-    font-family: poppinsRegular;
-    src: url(../fonts/Poppins-Regular.ttf);
-}
-@font-face{
-    font-family: poppinsMedium;
-    src: url(../fonts/Poppins-Medium.ttf);
-}
+// @font-face{
+//     font-family: poppinsRegular;
+//     src: url(../fonts/Poppins-Regular.ttf);
+// }
+// @font-face{
+//     font-family: poppinsMedium;
+//     src: url(../fonts/Poppins-Medium.ttf);
+// }
 
 .my-primary-font{
     font-family: nexaSlab;

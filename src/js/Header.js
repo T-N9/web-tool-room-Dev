@@ -28,9 +28,7 @@ const Header=props=>{
               <div className="row">
                   <div className="col-12 px-0">
                       <div className="d-flex justify-content-center flex-column align-items-center">
-                        <form className="w-100" id="form1">
-                          <input onKeyUp={componentDidMount}  className="form-control search-section" id="searchBar" type="text" placeholder="Search for something..." />
-                        </form>
+                        <input onKeyUp={componentDidMount}  className="form-control search-section" id="searchBar" type="text" placeholder="Search for something..." />
                       </div>
                   </div>
               </div>

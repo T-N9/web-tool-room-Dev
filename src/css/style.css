@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 @font-face {
   font-family: nexaSlab;
   src: url(../fonts/Fontfabric-NexaSlab-Regular.otf);
@@ -11,16 +12,6 @@
 @font-face {
   font-family: nexaBold;
   src: url(../fonts/NexaBold.otf);
-}
-
-@font-face {
-  font-family: poppinsRegular;
-  src: url(../fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-  font-family: poppinsMedium;
-  src: url(../fonts/Poppins-Medium.ttf);
 }
 
 .my-primary-font {
@@ -57,39 +48,39 @@
   }
 }
 
-@media screen and (max-width: 992px) {
-  .card-columns {
-    -webkit-column-count: 3 !important;
-            column-count: 3 !important;
-  }
-}
-
-@media screen and (min-width: 760px) {
-  .menu-links {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #noFoundData svg {
-    width: 70% !important;
-  }
+@media screen and (max-width: 991px) {
   .card-columns {
     -webkit-column-count: 2 !important;
             column-count: 2 !important;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .card-columns {
+    -webkit-column-count: 1 !important;
+            column-count: 1 !important;
+  }
   .landing-page {
-    left: 25px !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing-page .md-jc {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .landing-page--left img {
-    width: 90% !important;
+    width: 98% !important;
     margin-top: -100px;
-    margin-bottom: 100px;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 60px;
+  }
+  .landing-page--right {
+    text-align: center;
+    margin-left: 0px !important;
   }
 }
 
@@ -135,6 +126,54 @@
   }
   .landing-page--right p {
     font-size: 18px !important;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .menu-links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #noFoundData svg {
+    width: 70% !important;
+  }
+  .card-columns {
+    -webkit-column-count: 2 !important;
+            column-count: 2 !important;
+  }
+  .landing-page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing-page--left img {
+    width: 80% !important;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-columns {
+    -webkit-column-count: 3 !important;
+            column-count: 3 !important;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #landingSection {
+    height: 220vh !important;
+  }
+}
+
+@media screen and (max-width: 320px) and (max-height: 570px) {
+  #landingSection {
+    height: 100vh !important;
   }
 }
 
@@ -197,7 +236,8 @@ a:hover {
 }
 
 #appHeader .search-section {
-  font-family: poppinsRegular;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 #appHeader .search-section:focus {
@@ -213,7 +253,7 @@ a:hover {
 
 #landingSection {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   margin-top: -25px;
   background-color: white;
@@ -222,7 +262,7 @@ a:hover {
 
 #landingSection #tsparticles {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
 }
 
@@ -234,6 +274,10 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -249,7 +293,8 @@ a:hover {
 
 #landingSection .landing-page--right .landing-quote {
   font-size: 20px;
-  font-family: poppinsMedium;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 #landingSection .landing-page--right .landing-btn {
@@ -265,7 +310,8 @@ a:hover {
   padding: 15px;
   width: 150px;
   font-size: 18px;
-  font-family: poppinsMedium;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   color: white;
   background-color: #35363a;
 }
@@ -285,7 +331,8 @@ a:hover {
 }
 
 .menu-links {
-  font-family: poppinsMedium;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   margin-left: 15px;
@@ -307,6 +354,7 @@ a:hover {
   padding: 0px 10px;
   height: 35px;
   background-color: white;
+  border: 0.5px solid transparent;
   border-radius: 5px;
   -webkit-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
@@ -383,7 +431,8 @@ a:hover {
 }
 
 .data-section .data-items .data-name {
-  font-family: poppinsRegular;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   margin-bottom: 0px !important;
 }
@@ -430,9 +479,9 @@ a:hover {
 }
 
 footer {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 10vh;
+  bottom: 0;
   background-color: transparent;
   color: #35363a;
   display: -webkit-box;
@@ -444,6 +493,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer a {
+  color: #00A8B4;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: #00edce;
 }
 
 .sub-footer {
