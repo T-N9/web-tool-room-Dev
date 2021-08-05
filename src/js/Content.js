@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import Icon from './NotFound';
 import {
     BrowserRouter as Router,
@@ -7,7 +8,7 @@ import {
     Link,
   } from 'react-router-dom';
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-  import { faTh,faBars } from '@fortawesome/free-solid-svg-icons'
+  import { faTh,faBars,faInfo } from '@fortawesome/free-solid-svg-icons'
 import Header from './Header';
 import SocialComponent from './SocialApp';
 import DevComponent from './DevApp';
@@ -23,19 +24,19 @@ import GameComponent from './GameApp';
 
 const MenuSection=props=>{
 
-    // const menuToggle=()=>{
-    //     const menuDiv=document.getElementById('menuDiv');
-    //     const menu=document.getElementById('menuLinks');
-    //     menu.classList.toggle('menu-none');
-    //     menu.classList.toggle('menu-active');
-    //     menuDiv.classList.toggle('margin-div');
-    //     console.log('clicked');
-    // }
-
+    const showMenu = () =>{
+        $('#menuDiv').toggleClass('menuShowing');
+    }
     return(
         <Router id="dataPage">
             <Header/>
-            <div id="menuDiv"  className="position-relative margin-div text-center">
+            <div id="menuBar" className="d-flex  justify-content-between align-items-center margin-div">
+                <span id="menuBtn" onClick={showMenu}>
+                    <FontAwesomeIcon icon={faBars}/>
+                </span>
+                <FontAwesomeIcon icon={faInfo}/>
+            </div>
+            <div id="menuDiv"  className="position-relative  text-center">
                 <ul id="menuLinks" className="menu-links list-unstyled d-flex menu-active flex-wrap">
                     <li><Link to="/content/allApp"><FontAwesomeIcon icon={faTh}/></Link></li>
                     <li><Link to="/content/devApp">#Guide</Link></li>

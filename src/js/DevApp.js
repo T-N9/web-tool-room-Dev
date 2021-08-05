@@ -22,7 +22,7 @@ const DevComponent=props=>{
         {id:4, name:'JavaScript.info',link: 'https://javascript.info/',tag:'dev guide documentation blog self-study'},
         {id:5, name:'A Programmer',link: 'https://www.aprogrammer.blog/',tag:'dev guide self-study course learning myanmar'},
         {id:6, name:'DevNote',link: 'https://devnote.blog/',tag:'dev guide self-study blog learning myanmar'},
-        {id:7, name:'MMS IT',link: 'https://mms-it.com/',tag:'dev guide self-study course free learning myanmar heinhtetzan'},
+        {id:7, name:'MMS IT',link: 'https://mms-it.com/',tag:'dev devchoice guide self-study course free learning myanmar heinhtetzan'},
         {id:8, name:'Tech Guru',link: 'https://mmtechguru.com/',tag:'dev guide self-study course free learning myanmar'},
         {id:9, name:'Ei Maung',link: 'https://eimaung.com/',tag:'dev guide self-study course free books လိုတိုရှင်း ဆရာအိမောင် learning myanmar'},
         {id:10, name:'Exploring JS',link: 'https://exploringjs.com/',tag:'dev guide self-study book learning'},

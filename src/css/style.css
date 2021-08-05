@@ -30,6 +30,19 @@
   color: #35363a;
 }
 
+.addBorder {
+  border: 0.5px solid #00edce;
+}
+
+.menuShowing {
+  visibility: visible !important;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
 @-webkit-keyframes menuAni {
   from {
     opacity: 0;
@@ -45,6 +58,24 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #menuBar {
+    width: 94%;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  #menuBar {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #menuBar {
+    width: 60%;
   }
 }
 
@@ -191,6 +222,10 @@ html {
   /* Internet Explorer/Edge */
 }
 
+.data-tag {
+  visibility: hidden;
+}
+
 .margin-div {
   margin-top: 70px;
 }
@@ -326,8 +361,25 @@ a:hover {
 }
 
 #menuDiv {
-  -webkit-transition: 0.3s ease-in all;
-  transition: 0.3s ease-in all;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  visibility: hidden;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  height: 0;
+}
+
+#menuBar {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 15px;
+  padding-top: 5px;
+  font-size: 25px;
+  color: #00edce;
 }
 
 .menu-links {
@@ -403,6 +455,8 @@ a:hover {
 
 .data-section {
   margin-top: 1rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .data-section .data-items {

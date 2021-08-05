@@ -36,3 +36,13 @@ $my-dark-color:#35363a;
 .my-dark-color{
     color: $my-dark-color;
 }
+
+.addBorder{
+    border: 0.5px solid $my-primary-color;
+}
+
+.menuShowing{
+    visibility: visible !important;
+    transform: scaleY(1) !important;
+    height: fit-content !important;
+}

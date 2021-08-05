@@ -10,6 +10,9 @@ html{
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+.data-tag{
+    visibility: hidden;
+}
 .margin-div{
     margin-top: 70px;
 }
@@ -113,7 +116,21 @@ a:hover{
     transform: rotate(50deg);
 }
 #menuDiv{
-    transition: 0.3s ease-in all;
+    transition: all 200ms ease-in-out;
+    visibility: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+    height: 0;
+}
+#menuBar{
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    padding-top: 5px;
+    font-size: 25px;
+    color: $my-primary-color;
 }
 .menu-links{
     font-family: 'Poppins', sans-serif;
@@ -165,6 +182,7 @@ a:hover{
 }
 .data-section{
     margin-top: 1rem;
+    transition: all 200ms ease-in-out;
     .data-items{
         position: relative;
         display: flex;
