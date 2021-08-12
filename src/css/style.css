@@ -264,7 +264,7 @@ a:hover {
   padding: 10px 20px;
   width: 100%;
   position: fixed;
-  z-index: 500;
+  z-index: 1000;
   top: 0;
   left: 0;
   background-color: rgba(51, 51, 51, 0.5);
@@ -361,6 +361,13 @@ a:hover {
 }
 
 #menuDiv {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  padding: 20px 20px 0 0px;
+  background-image: radial-gradient(#00edce50, #35363a);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   visibility: hidden;
@@ -368,7 +375,9 @@ a:hover {
           transform-origin: top;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  height: 0;
+  height: auto;
+  border-radius: 20px;
+  border: 0.5px solid #00edce;
 }
 
 #menuBar {
@@ -377,9 +386,17 @@ a:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 15px;
-  padding-top: 5px;
+  padding-top: 0px;
   font-size: 25px;
   color: #00edce;
+}
+
+#menuBar #menuBtn {
+  cursor: pointer;
+}
+
+#menuBar a {
+  color: #00edce !important;
 }
 
 .menu-links {
@@ -454,7 +471,6 @@ a:hover {
 }
 
 .data-section {
-  margin-top: 1rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
@@ -530,6 +546,16 @@ a:hover {
 .data-section .data-items a .use-btn:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 237, 206, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 237, 206, 0.25);
+}
+
+.info-page {
+  color: white;
+  text-align: center;
+}
+
+.info-page p {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0 !important;
 }
 
 footer {

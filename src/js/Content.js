@@ -20,6 +20,7 @@ import InsComponent from './Inspiration';
 import IllComponent from './Illustration';
 import ImageComponent from './ImageApp';
 import GameComponent from './GameApp';
+import InfoComponent from './Info';
 
 
 const MenuSection=props=>{
@@ -27,6 +28,7 @@ const MenuSection=props=>{
     const showMenu = () =>{
         $('#menuDiv').toggleClass('menuShowing');
     }
+
     return(
         <Router id="dataPage">
             <Header/>
@@ -34,53 +36,98 @@ const MenuSection=props=>{
                 <span id="menuBtn" onClick={showMenu}>
                     <FontAwesomeIcon icon={faBars}/>
                 </span>
-                <FontAwesomeIcon icon={faInfo}/>
+
+                <span id="infoBtn">
+                    <Link to="/content/info">
+                        <FontAwesomeIcon icon={faInfo}/>
+                    </Link>
+                </span>
             </div>
-            <div id="menuDiv"  className="position-relative  text-center">
+            <div id="menuDiv"  className="text-center">
                 <ul id="menuLinks" className="menu-links list-unstyled d-flex menu-active flex-wrap">
-                    <li><Link to="/content/allApp"><FontAwesomeIcon icon={faTh}/></Link></li>
-                    <li><Link to="/content/devApp">#Guide</Link></li>
-                    <li><Link to="/content/designApp">#Design</Link></li>
-                    <li><Link to="/content/colorApp">#Color</Link></li>
-                    <li><Link to="/content/fontApp">#Fonts</Link></li>
-                    <li><Link to="/content/iconApp">#Icons</Link></li>
-                    <li><Link to="/content/insApp">#Inspirations</Link></li>
-                    <li><Link to="/content/illApp">#Illustrations</Link></li>
-                    <li><Link to="/content/imgApp">#Images</Link></li>
-                    <li><Link to="/content/gameApp">#Games</Link></li>
-                    <li><Link to="/content/socialApp">#Social</Link></li>
+                    <li onClick={showMenu}><Link to="/content/allApp"><FontAwesomeIcon icon={faTh}/></Link></li>
+                    <li onClick={showMenu}><Link to="/content/devApp">#Guide</Link></li>
+                    <li onClick={showMenu}><Link to="/content/designApp">#Design</Link></li>
+                    <li onClick={showMenu}><Link to="/content/colorApp">#Color</Link></li>
+                    <li onClick={showMenu}><Link to="/content/fontApp">#Fonts</Link></li>
+                    <li onClick={showMenu}><Link to="/content/iconApp">#Icons</Link></li>
+                    <li onClick={showMenu}><Link to="/content/insApp">#Inspirations</Link></li>
+                    <li onClick={showMenu}><Link to="/content/illApp">#Illustrations</Link></li>
+                    <li onClick={showMenu}><Link to="/content/imgApp">#Images</Link></li>
+                    <li onClick={showMenu}><Link to="/content/gameApp">#Games</Link></li>
+                    <li onClick={showMenu}><Link to="/content/socialApp">#Social</Link></li>
                 </ul>
-                {/* <div onClick={menuToggle} style={{color:'white', display: 'inline', fontSize: 25, cursor: 'pointer'}} >
-                    <FontAwesomeIcon icon={faBars}/>
-                </div> */}
             </div>
             <section id="dataSectionMenu" className="container data-section">
-                <div className="card-columns">
+                {/* <div className="card-columns"> */}
                     <Switch>
                         <Route path="/content/allApp">
-                            <DevComponent/>
-                            <DesignComponent/>
-                            <ColorComponent/>
-                            <FontComponent/>
-                            <IconComponent/>
-                            <InsComponent/>
-                            <IllComponent/>
-                            <ImageComponent/>
-                            <GameComponent/>
-                            <SocialComponent/>
+                            <div className="card-columns">
+                                <DevComponent/>
+                                <DesignComponent/>
+                                <ColorComponent/>
+                                <FontComponent/>
+                                <IconComponent/>
+                                <InsComponent/>
+                                <IllComponent/>
+                                <ImageComponent/>
+                                <GameComponent/>
+                                <SocialComponent/>
+                            </div>
                         </Route>
-                        <Route path="/content/socialApp"><SocialComponent/></Route> 
-                        <Route path="/content/devApp"><DevComponent/></Route> 
-                        <Route path="/content/designApp"><DesignComponent/></Route> 
-                        <Route path="/content/colorApp"><ColorComponent/></Route> 
-                        <Route path="/content/fontApp"><FontComponent/></Route> 
-                        <Route path="/content/iconApp"><IconComponent/></Route> 
-                        <Route path="/content/insApp"><InsComponent/></Route>
-                        <Route path="/content/illApp"><IllComponent/></Route>
-                        <Route path="/content/imgApp"><ImageComponent/></Route>
-                        <Route path="/content/gameApp"><GameComponent/></Route>
+                        <Route path="/content/socialApp">
+                            <div className="card-columns">
+                                <SocialComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/devApp">
+                            <div className="card-columns">
+                                <DevComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/designApp">
+                            <div className="card-columns">
+                                <DesignComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/colorApp">
+                            <div className="card-columns">
+                                <ColorComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/fontApp">
+                            <div className="card-columns">
+                                <FontComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/iconApp">
+                            <div className="card-columns">
+                                <IconComponent/>
+                            </div>
+                        </Route> 
+                        <Route path="/content/insApp">
+                            <div className="card-columns">
+                                <InsComponent/>
+                            </div>
+                        </Route>
+                        <Route path="/content/illApp">
+                            <div className="card-columns">
+                                <IllComponent/>
+                            </div>
+                        </Route>
+                        <Route path="/content/imgApp">
+                            <div className="card-columns">
+                                <ImageComponent/>
+                            </div>
+                        </Route>
+                        <Route path="/content/gameApp">
+                            <div className="card-columns">
+                                <GameComponent/>
+                            </div>
+                        </Route>
+                        <Route path="/content/info"><InfoComponent/></Route>
                     </Switch>
-                </div>
+                {/* </div> */}
             </section>
             <section id="noFoundData" className="d-none">
                 <h1 className="my-primary-color">Item Not Found!</h1>
